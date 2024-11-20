@@ -35,9 +35,9 @@ function populateHeader(jsonObj) {
     header.append(headrH1);
 };
 /* STEP 10b: Assemble the showTopFlavors() function */
-function showTopFlavors() {
-    // STEP 10c: Attache the JSON topFlavors object to a variable
-    //let topFlavors = jsonObj.topFlavors;
+function showTopFlavors(jsonObj) {
+    // STEP 10c: Attach the JSON topFlavors object to a variable
+  let topFlavors = jsonObj.topFlavors;
     // STEP 10d: Loop through the topFlavors object
     for (let i = 0; i < topFlavors.length; i ++) {
         // STEP 10e: build HTML elements for the content
