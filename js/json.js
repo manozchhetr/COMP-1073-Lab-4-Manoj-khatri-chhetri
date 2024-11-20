@@ -5,7 +5,7 @@ const section = document.querySelector("section");
 // STEP 3a: Create the asynchronous function populate()
 async function populate() {
     // Introducing JavaScript Object Notation (JSON): https://json.org/
-    const requestURL = "./i-scream.json";  // Ensure this points to your JSON file in the js folder.
+    const requestURL = "./js/i-scream.json";
     
     // STEP 5: Use the new URL to create a new request object
     const request = new Request(requestURL);
@@ -61,7 +61,7 @@ function showTopFlavors(jsonObj) {
 
         // STEP 10f: Set the textContent property for each of the above elements (except the UL), based on the JSON content
         h2.textContent = flavor.name;
-        image.setAttribute("src", `./images/${flavor.image}`);  // Make sure images are in the "images" folder
+        image.setAttribute("src", `./images/${flavor.image}`);
         image.setAttribute("alt", `${flavor.name} image`);
         pCalories.textContent = `Calories: ${flavor.calories}`;
 
@@ -82,4 +82,12 @@ function showTopFlavors(jsonObj) {
         section.appendChild(article);
     });
 }
+// for commit  adding this unnecessary line//
 
+// STEP 11: The instructor will edit the JSON file - refresh your page to see the updated content
+
+// STEP 12: Change the URL in STEP 3 to point to the JSON file in the local /js folder in order to prepare for today's lab
+
+// This page inspired by and adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+
+// A special thanks to https://openclipart.org/detail/285225/ice-cream-cones for the awesome ice cream cone illustrations
