@@ -26,13 +26,13 @@ async function populate() {
 populate();
 
 /* STEP 9b: Build out the populateHeader() function */
-function populateHeader() {
+function populateHeader(jsonObj) {
     // Create the H1 element
-    
+    const headrH1 = document.createElement("h1");
     // Grab the company name from the JSON object and use it for the text node
-    
+    headrH1.textContent = jsonObj.companyName;
     // Inject the complete H1 element into the DOM, inside the HEADER
-    
+    header.append(headrH1);
 };
 /* STEP 10b: Assemble the showTopFlavors() function */
 function showTopFlavors() {
