@@ -52,7 +52,12 @@ function showTopFlavors(jsonObj) {
     pCalories.textContent = `Calories: ${topFlavors[i]["calories"]}`; // Display calories
 
         // STEP 10g: Build a loop for the ingredients array in the JSON
-        
+        let ingredients = topFlavors[i]["ingredients"];
+    for (let j = 0; j < ingredients.length; j++) {
+      let listItem = document.createElement("li");
+      listItem.textContent = ingredients[j];
+      ul.appendChild(listItem);
+    }
             // add the ingredient to the UL
 
         // STEP 10h: Append each of the above HTML elements to the ARTICLE element
